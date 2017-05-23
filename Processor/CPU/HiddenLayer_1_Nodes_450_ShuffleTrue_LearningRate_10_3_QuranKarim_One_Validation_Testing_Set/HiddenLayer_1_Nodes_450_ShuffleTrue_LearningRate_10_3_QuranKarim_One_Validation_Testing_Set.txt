@@ -1,0 +1,91 @@
+Started in hybrid online/batch training mode.
+Sequences will be shuffled within and across mini-batches during training.
+The trained network will be written to 'savedNetwork.jsn'.
+WARNING: The output file 'savedNetwork.jsn' already exists. It will be overwritten!
+Validation error will be calculated every 1 epochs.
+Test error will be calculated every 10 epochs.
+Training will be stopped after 100 epochs or if there is no new lowest validation error within 20 epochs.
+Autosave on BEST VALIDATION ERROR enabled.
+WARNING: CUDA option not set. Computations will be performed on the CPU!
+Uniform distribution with range [-0.1, 0.1]. Random seed: 1561249810
+
+Reading network from 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\network.jsn'... done.
+
+Loading training set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\training_and_validationNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\df9b-5d51-4da3-803d
+... done.
+Loaded fraction:  100%
+Sequences:        4590
+Sequence lengths: 2..551
+Total timesteps:  281230
+
+Loading validation set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingonlyNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\b1a6-196b-523f-01c8
+... done.
+Loaded fraction:  100%
+Sequences:        1646
+Sequence lengths: 5..329
+Total timesteps:  49479
+
+Loading test set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingonlyNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\04e6-4b84-7e74-8008
+... done.
+Loaded fraction:  100%
+Sequences:        1646
+Sequence lengths: 5..329
+Total timesteps:  49479
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 450, bias: 1.0, weights: 472950]
+(2) softmax [size: 422, bias: 1.0, weights: 190322]
+(3) multiclass_classification [size: 422]
+Total weights: 663272
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    829.5 | 27.85%    65.025 | 21.43%    20.174 |                  |  yes
+     2 |    825.2 | 15.21%    28.745 | 17.57%    16.112 |                  |  yes
+     3 |    824.9 | 12.10%    22.556 | 15.51%    14.407 |                  |  yes
+     4 |    826.4 | 10.02%    18.743 | 14.51%    13.606 |                  |  yes
+     5 |    824.5 |  8.55%    15.998 | 13.96%    13.331 |                  |  yes
+     6 |    823.9 |  7.34%    13.769 | 13.38%    12.889 |                  |  yes
+     7 |    824.0 |  6.37%    11.960 | 13.09%    12.871 |                  |  yes
+     8 |    848.3 |  5.47%    10.397 | 12.99%    12.989 |                  |  no
+     9 |    821.1 |  4.69%     8.978 | 12.71%    12.981 |                  |  no
+    10 |    863.7 |  4.11%     7.911 | 12.57%    13.081 | 12.57%    13.081 |  no
+    11 |    821.5 |  3.45%     6.788 | 12.56%    13.351 |                  |  no
+    12 |    820.8 |  2.99%     5.927 | 12.75%    13.723 |                  |  no
+    13 |    821.3 |  2.56%     5.168 | 12.55%    13.746 |                  |  no
+    14 |    820.7 |  2.16%     4.481 | 12.60%    13.937 |                  |  no
+    15 |    821.1 |  1.89%     4.018 | 12.59%    14.232 |                  |  no
+    16 |    827.6 |  1.53%     3.415 | 12.50%    14.508 |                  |  no
+    17 |    821.0 |  1.20%     2.849 | 12.61%    14.901 |                  |  no
+    18 |    818.7 |  1.00%     2.489 | 12.29%    14.901 |                  |  no
+    19 |    821.8 |  0.76%     2.075 | 12.35%    15.315 |                  |  no
+    20 |    857.9 |  0.54%     1.686 | 12.33%    15.567 | 12.33%    15.567 |  no
+    21 |    781.5 |  0.35%     1.325 | 12.12%    15.795 |                  |  no
+    22 |    777.4 |  0.22%     1.023 | 12.28%    15.898 |                  |  no
+    23 |    777.5 |  0.08%     0.683 | 11.96%    16.130 |                  |  no
+    24 |    777.0 |  0.02%     0.397 | 11.79%    16.434 |                  |  no
+    25 |    768.9 |  0.01%     0.262 | 11.91%    16.846 |                  |  no
+    26 |    768.1 |  0.01%     0.190 | 11.95%    17.080 |                  |  no
+    27 |    767.3 |  0.00%     0.147 | 11.95%    17.353 |                  |  no
+
+No new lowest error since 20 epochs. Training stopped.
+Lowest validation error: 12.871490
+
+Storing the trained network in 'savedNetwork.jsn'... done.
