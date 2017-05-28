@@ -1,0 +1,100 @@
+Started in hybrid online/batch training mode.
+Sequences will be shuffled within and across mini-batches during training.
+The trained network will be written to 'savedNetwork.jsn'.
+WARNING: The output file 'savedNetwork.jsn' already exists. It will be overwritten!
+Validation error will be calculated every 1 epochs.
+Test error will be calculated every 10 epochs.
+Training will be stopped after 100 epochs or if there is no new lowest validation error within 20 epochs.
+Autosave on BEST VALIDATION ERROR enabled.
+WARNING: CUDA option not set. Computations will be performed on the CPU!
+Uniform distribution with range [-0.1, 0.1]. Random seed: 1768805387
+
+Reading network from 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\network.jsn'... done.
+
+Loading training set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\trainingNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\5765-838e-92c2-23e9
+... done.
+Loaded fraction:  100%
+Sequences:        3566
+Sequence lengths: 2..551
+Total timesteps:  231600
+
+Loading validation set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\validationNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\dd08-1106-fc14-e2bc
+... done.
+Loaded fraction:  100%
+Sequences:        1024
+Sequence lengths: 2..294
+Total timesteps:  49630
+
+Loading test set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\5abc-e75b-e1a5-517e
+... done.
+Loaded fraction:  100%
+Sequences:        1646
+Sequence lengths: 5..329
+Total timesteps:  49479
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 250, bias: 1.0, weights: 162750]
+(2) softmax [size: 14, bias: 1.0, weights: 3514]
+(3) multiclass_classification [size: 14]
+Total weights: 166264
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    175.0 | 33.81%    62.972 | 24.93%    34.877 |                  |  yes
+     2 |    181.0 | 21.77%    41.307 | 19.18%    27.446 |                  |  yes
+     3 |    179.4 | 17.86%    33.853 | 16.29%    23.390 |                  |  yes
+     4 |    175.1 | 15.35%    29.235 | 14.56%    21.145 |                  |  yes
+     5 |    173.4 | 13.57%    25.981 | 13.91%    20.108 |                  |  yes
+     6 |    174.3 | 12.22%    23.420 | 12.96%    18.865 |                  |  yes
+     7 |    174.3 | 11.09%    21.348 | 12.28%    17.722 |                  |  yes
+     8 |    173.8 | 10.11%    19.534 | 11.92%    17.377 |                  |  yes
+     9 |    173.9 |  9.31%    17.951 | 11.44%    17.051 |                  |  yes
+    10 |    185.7 |  8.51%    16.486 | 11.08%    16.599 | 14.93%    14.451 |  yes
+    11 |    177.5 |  7.84%    15.158 | 10.95%    16.669 |                  |  no
+    12 |    184.4 |  7.19%    13.887 | 10.95%    16.653 |                  |  no
+    13 |    182.4 |  6.64%    12.825 | 10.33%    15.962 |                  |  yes
+    14 |    185.4 |  6.06%    11.766 | 10.49%    16.412 |                  |  no
+    15 |    182.4 |  5.52%    10.707 | 10.40%    16.542 |                  |  no
+    16 |    183.0 |  5.08%     9.787 | 10.38%    17.141 |                  |  no
+    17 |    183.7 |  4.65%     8.962 | 10.18%    17.696 |                  |  no
+    18 |    184.6 |  4.27%     8.244 | 10.18%    17.886 |                  |  no
+    19 |    184.0 |  3.91%     7.504 | 10.31%    18.271 |                  |  no
+    20 |    199.3 |  3.49%     6.858 | 10.29%    18.855 | 14.58%    18.132 |  no
+    21 |    183.8 |  3.25%     6.323 | 10.21%    19.159 |                  |  no
+    22 |    182.9 |  2.93%     5.722 | 10.25%    19.456 |                  |  no
+    23 |    185.8 |  2.78%     5.364 | 10.22%    19.667 |                  |  no
+    24 |    186.9 |  2.49%     4.827 | 10.08%    20.383 |                  |  no
+    25 |    183.2 |  2.30%     4.458 | 10.39%    20.738 |                  |  no
+    26 |    185.0 |  2.05%     4.045 | 10.18%    20.931 |                  |  no
+    27 |    187.3 |  1.88%     3.700 | 10.33%    22.094 |                  |  no
+    28 |    185.2 |  1.68%     3.380 | 10.39%    21.910 |                  |  no
+    29 |    183.3 |  1.53%     3.059 | 10.18%    22.501 |                  |  no
+    30 |    198.0 |  1.38%     2.801 | 10.19%    23.087 | 14.63%    22.885 |  no
+    31 |    188.2 |  1.14%     2.393 | 10.08%    23.345 |                  |  no
+    32 |    173.8 |  1.06%     2.257 | 10.04%    23.608 |                  |  no
+    33 |    172.5 |  0.90%     1.977 | 10.04%    23.809 |                  |  no
+
+No new lowest error since 20 epochs. Training stopped.
+Lowest validation error: 15.961587
+
+Storing the trained network in 'savedNetwork.jsn'... done.
+Removing cache file(s) ...
+FAILED: boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:\Users\MOHAME~1\AppData\Local\Temp\5765-838e-92c2-23e9"
+Press any key to continue . . .

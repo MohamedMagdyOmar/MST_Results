@@ -1,0 +1,166 @@
+Started in hybrid online/batch training mode.
+Sequences will be shuffled within and across mini-batches during training.
+The trained network will be written to 'savedNetwork.jsn'.
+WARNING: The output file 'savedNetwork.jsn' already exists. It will be overwritten!
+Validation error will be calculated every 1 epochs.
+Test error will be calculated every 10 epochs.
+Training will be stopped after 100 epochs or if there is no new lowest validation error within 20 epochs.
+Autosave on BEST VALIDATION ERROR enabled.
+WARNING: CUDA option not set. Computations will be performed on the CPU!
+Uniform distribution with range [-0.1, 0.1]. Random seed: 1136983177
+
+Reading network from 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\mynn2-.best.jsn'... done.
+
+Loading training set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\trainingNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\f092-c83c-f008-6e46
+... done.
+Loaded fraction:  100%
+Sequences:        3566
+Sequence lengths: 2..551
+Total timesteps:  231600
+
+Loading validation set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\validationNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\727b-2279-a501-b050
+... done.
+Loaded fraction:  100%
+Sequences:        1024
+Sequence lengths: 2..294
+Total timesteps:  49630
+
+Loading test set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\131e-0a64-b36b-78e6
+... done.
+Loaded fraction:  100%
+Sequences:        1646
+Sequence lengths: 5..329
+Total timesteps:  49479
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 250, bias: 1.0, weights: 162750]
+(2) softmax [size: 14, bias: 1.0, weights: 3514]
+(3) multiclass_classification [size: 14]
+Total weights: 166264
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          10
+Learning rate:             1e-05
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    177.2 | 12.69%    25.043 | 14.36%    21.487 |                  |  yes
+     2 |    175.8 | 12.64%    24.971 | 14.26%    21.364 |                  |  yes
+     3 |    174.5 | 12.61%    24.903 | 14.34%    21.344 |                  |  yes
+     4 |    174.6 | 12.61%    24.866 | 14.31%    21.254 |                  |  yes
+     5 |    176.8 | 12.57%    24.803 | 14.57%    21.537 |                  |  no
+     6 |    171.1 | 12.50%    24.730 | 14.28%    21.279 |                  |  no
+     7 |    170.5 | 12.49%    24.649 | 14.40%    21.360 |                  |  no
+     8 |    171.8 | 12.47%    24.595 | 14.19%    21.143 |                  |  yes
+     9 |    175.8 | 12.41%    24.524 | 14.07%    21.053 |                  |  yes
+    10 |    186.3 | 12.40%    24.455 | 14.08%    21.145 | 18.05%    16.676 |  no
+    11 |    171.3 | 12.32%    24.420 | 14.18%    21.154 |                  |  no
+    12 |    183.3 | 12.33%    24.342 | 14.07%    20.952 |                  |  yes
+    13 |    182.4 | 12.28%    24.268 | 14.22%    21.083 |                  |  no
+    14 |    172.3 | 12.27%    24.210 | 14.06%    20.991 |                  |  no
+    15 |    177.6 | 12.20%    24.158 | 14.42%    21.333 |                  |  no
+    16 |    173.7 | 12.16%    24.078 | 14.07%    20.946 |                  |  yes
+    17 |    178.0 | 12.14%    24.032 | 14.01%    21.080 |                  |  no
+    18 |    179.3 | 12.12%    23.925 | 14.07%    20.923 |                  |  yes
+    19 |    177.1 | 12.10%    23.905 | 13.98%    20.926 |                  |  no
+    20 |    187.5 | 12.05%    23.830 | 13.94%    20.787 | 18.07%    16.548 |  yes
+    21 |    176.4 | 11.99%    23.770 | 13.99%    20.822 |                  |  no
+    22 |    172.7 | 11.97%    23.691 | 14.00%    20.781 |                  |  yes
+    23 |    175.9 | 11.91%    23.656 | 14.09%    20.923 |                  |  no
+    24 |    176.0 | 11.92%    23.578 | 13.92%    20.812 |                  |  no
+    25 |    178.4 | 11.87%    23.541 | 13.94%    20.988 |                  |  no
+    26 |    186.9 | 11.84%    23.461 | 13.91%    20.869 |                  |  no
+    27 |    172.9 | 11.76%    23.403 | 13.91%    20.818 |                  |  no
+    28 |    172.3 | 11.76%    23.362 | 13.88%    20.785 |                  |  no
+    29 |    173.3 | 11.74%    23.305 | 13.89%    20.766 |                  |  yes
+    30 |    187.7 | 11.70%    23.242 | 13.83%    20.844 | 17.99%    16.620 |  no
+    31 |    173.5 | 11.68%    23.182 | 13.79%    20.624 |                  |  yes
+    32 |    176.9 | 11.65%    23.123 | 13.75%    20.590 |                  |  yes
+    33 |    188.3 | 11.62%    23.042 | 13.67%    20.560 |                  |  yes
+    34 |    181.2 | 11.63%    23.006 | 13.78%    20.581 |                  |  no
+    35 |    171.9 | 11.55%    22.927 | 13.72%    20.505 |                  |  yes
+    36 |    175.7 | 11.53%    22.872 | 13.74%    20.646 |                  |  no
+    37 |    170.8 | 11.47%    22.846 | 13.78%    20.522 |                  |  no
+    38 |    170.4 | 11.48%    22.775 | 13.80%    20.633 |                  |  no
+    39 |    171.0 | 11.48%    22.737 | 13.61%    20.440 |                  |  yes
+    40 |    187.3 | 11.41%    22.670 | 13.59%    20.476 | 17.84%    16.486 |  no
+    41 |    173.1 | 11.32%    22.597 | 13.70%    20.510 |                  |  no
+    42 |    172.6 | 11.38%    22.563 | 13.87%    20.682 |                  |  no
+    43 |    173.1 | 11.30%    22.493 | 13.77%    20.592 |                  |  no
+    44 |    172.5 | 11.28%    22.406 | 13.71%    20.489 |                  |  no
+    45 |    172.2 | 11.24%    22.387 | 13.71%    20.438 |                  |  yes
+    46 |    175.3 | 11.24%    22.326 | 13.62%    20.358 |                  |  yes
+    47 |    175.3 | 11.19%    22.275 | 13.81%    20.525 |                  |  no
+    48 |    172.6 | 11.20%    22.217 | 13.61%    20.391 |                  |  no
+    49 |    170.2 | 11.17%    22.170 | 13.50%    20.376 |                  |  no
+    50 |    182.0 | 11.09%    22.097 | 13.70%    20.359 | 17.83%    16.441 |  no
+    51 |    169.9 | 11.04%    22.038 | 13.62%    20.305 |                  |  yes
+    52 |    174.9 | 11.04%    22.020 | 13.36%    20.093 |                  |  yes
+    53 |    175.3 | 10.97%    21.938 | 13.36%    20.125 |                  |  no
+    54 |    176.6 | 10.98%    21.879 | 13.58%    20.338 |                  |  no
+    55 |    190.1 | 10.97%    21.835 | 13.64%    20.451 |                  |  no
+    56 |    173.7 | 10.90%    21.767 | 13.45%    20.226 |                  |  no
+    57 |    181.7 | 10.90%    21.733 | 13.47%    20.302 |                  |  no
+    58 |    172.4 | 10.84%    21.684 | 13.44%    20.164 |                  |  no
+    59 |    173.4 | 10.83%    21.624 | 13.95%    20.876 |                  |  no
+    60 |    184.9 | 10.79%    21.580 | 13.44%    20.181 | 17.67%    16.452 |  no
+    61 |    172.8 | 10.74%    21.505 | 13.36%    20.075 |                  |  yes
+    62 |    179.2 | 10.77%    21.464 | 13.32%    20.078 |                  |  no
+    63 |    185.8 | 10.77%    21.439 | 13.49%    20.255 |                  |  no
+    64 |    186.0 | 10.72%    21.353 | 13.49%    20.220 |                  |  no
+    65 |    186.1 | 10.66%    21.310 | 13.53%    20.292 |                  |  no
+    66 |    175.0 | 10.68%    21.282 | 13.76%    20.471 |                  |  no
+    67 |    176.1 | 10.65%    21.231 | 13.29%    19.990 |                  |  yes
+    68 |    180.4 | 10.62%    21.180 | 13.34%    20.072 |                  |  no
+    69 |    172.3 | 10.53%    21.118 | 13.38%    20.187 |                  |  no
+    70 |    185.4 | 10.51%    21.072 | 13.33%    20.016 | 17.66%    16.382 |  no
+    71 |    171.7 | 10.48%    21.017 | 13.20%    19.972 |                  |  yes
+    72 |    175.1 | 10.46%    20.969 | 13.47%    20.177 |                  |  no
+    73 |    172.7 | 10.46%    20.901 | 13.28%    20.041 |                  |  no
+    74 |    169.8 | 10.40%    20.879 | 13.44%    20.189 |                  |  no
+    75 |    170.3 | 10.37%    20.855 | 13.21%    20.038 |                  |  no
+    76 |    170.2 | 10.38%    20.786 | 13.36%    19.992 |                  |  no
+    77 |    172.1 | 10.38%    20.716 | 13.05%    19.843 |                  |  yes
+    78 |    174.9 | 10.31%    20.671 | 13.26%    20.087 |                  |  no
+    79 |    171.7 | 10.27%    20.613 | 13.53%    20.077 |                  |  no
+    80 |    184.2 | 10.25%    20.584 | 13.19%    19.886 | 17.43%    16.331 |  no
+    81 |    172.0 | 10.27%    20.543 | 13.36%    20.027 |                  |  no
+    82 |    172.2 | 10.15%    20.486 | 13.30%    20.155 |                  |  no
+    83 |    171.9 | 10.18%    20.453 | 13.21%    19.919 |                  |  no
+    84 |    171.5 | 10.13%    20.405 | 13.32%    20.053 |                  |  no
+    85 |    171.6 | 10.17%    20.370 | 13.22%    19.886 |                  |  no
+    86 |    171.7 | 10.10%    20.311 | 13.28%    20.011 |                  |  no
+    87 |    172.2 | 10.06%    20.258 | 13.10%    19.807 |                  |  yes
+    88 |    174.4 | 10.04%    20.195 | 13.23%    19.964 |                  |  no
+    89 |    171.6 | 10.02%    20.170 | 13.24%    20.059 |                  |  no
+    90 |    183.9 | 10.04%    20.121 | 13.14%    19.920 | 17.61%    16.432 |  no
+    91 |    171.3 |  9.99%    20.078 | 13.20%    19.814 |                  |  no
+    92 |    172.1 |  9.93%    20.029 | 13.27%    20.140 |                  |  no
+    93 |    169.9 |  9.92%    19.976 | 13.19%    19.836 |                  |  no
+    94 |    170.4 |  9.93%    19.959 | 13.43%    20.057 |                  |  no
+    95 |    169.6 |  9.85%    19.916 | 13.22%    20.036 |                  |  no
+    96 |    169.9 |  9.86%    19.838 | 13.20%    19.970 |                  |  no
+    97 |    170.4 |  9.84%    19.841 | 13.00%    19.728 |                  |  yes
+    98 |    173.7 |  9.79%    19.758 | 13.11%    19.824 |                  |  no
+    99 |    170.0 |  9.74%    19.717 | 13.24%    19.964 |                  |  no
+   100 |    181.5 |  9.78%    19.667 | 13.24%    20.013 | 17.69%    16.614 |  no
+
+Maximum number of training epochs reached. Training stopped.
+Lowest validation error: 19.727568
+
+Storing the trained network in 'savedNetwork.jsn'... done.
+Removing cache file(s) ...
+FAILED: boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:\Users\MOHAME~1\AppData\Local\Temp\f092-c83c-f008-6e46"
