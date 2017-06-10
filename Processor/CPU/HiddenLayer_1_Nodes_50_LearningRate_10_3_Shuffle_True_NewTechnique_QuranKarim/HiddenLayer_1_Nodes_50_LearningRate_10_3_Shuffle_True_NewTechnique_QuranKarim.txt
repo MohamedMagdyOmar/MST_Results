@@ -1,0 +1,120 @@
+Started in hybrid online/batch training mode.
+Sequences will be shuffled within and across mini-batches during training.
+The trained network will be written to 'savedNetwork.jsn'.
+WARNING: The output file 'savedNetwork.jsn' already exists. It will be overwritten!
+Validation error will be calculated every 1 epochs.
+Test error will be calculated every 10 epochs.
+Training will be stopped after 200 epochs or if there is no new lowest validation error within 20 epochs.
+Autosave on BEST VALIDATION ERROR enabled.
+WARNING: CUDA option not set. Computations will be performed on the CPU!
+Uniform distribution with range [-0.1, 0.1]. Random seed: 512833695
+
+Reading network from 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\network.jsn'... done.
+
+Loading training set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\trainingNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\e6ed-6521-9e3a-8477
+... done.
+Loaded fraction:  100%
+Sequences:        2670
+Sequence lengths: 2..329
+Total timesteps:  99109
+
+Loading validation set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\validationNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\65e1-99f5-7802-1c50
+... done.
+Loaded fraction:  100%
+Sequences:        5212
+Sequence lengths: 2..551
+Total timesteps:  281079
+
+Loading test set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\256a-7b15-97b4-d321
+... done.
+Loaded fraction:  100%
+Sequences:        4590
+Sequence lengths: 2..551
+Total timesteps:  281230
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 50, bias: 1.0, weights: 12550]
+(2) softmax [size: 14, bias: 1.0, weights: 714]
+(3) multiclass_classification [size: 14]
+Total weights: 13264
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       200
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |     17.1 | 43.08%    45.836 | 32.96%    51.554 |                  |  yes
+     2 |     18.9 | 29.89%    32.160 | 27.98%    43.780 |                  |  yes
+     3 |     17.9 | 26.22%    28.177 | 25.02%    39.138 |                  |  yes
+     4 |     17.3 | 23.61%    25.604 | 23.79%    37.149 |                  |  yes
+     5 |     19.6 | 22.05%    23.854 | 22.01%    34.723 |                  |  yes
+     6 |     19.3 | 20.62%    22.456 | 21.27%    33.327 |                  |  yes
+     7 |     18.9 | 19.57%    21.312 | 20.40%    32.297 |                  |  yes
+     8 |     17.7 | 18.73%    20.432 | 19.57%    31.327 |                  |  yes
+     9 |     17.8 | 18.04%    19.739 | 19.66%    30.998 |                  |  yes
+    10 |     30.1 | 17.45%    19.162 | 18.88%    29.738 | 18.66%    33.490 |  yes
+    11 |     20.6 | 17.02%    18.601 | 18.43%    29.225 |                  |  yes
+    12 |     21.9 | 16.66%    18.181 | 18.75%    29.825 |                  |  no
+    13 |     22.6 | 16.19%    17.779 | 17.64%    28.212 |                  |  yes
+    14 |     19.1 | 15.90%    17.409 | 17.55%    28.036 |                  |  yes
+    15 |     18.8 | 15.50%    17.066 | 17.43%    27.934 |                  |  yes
+    16 |     17.6 | 15.31%    16.794 | 17.24%    27.563 |                  |  yes
+    17 |     17.5 | 15.10%    16.508 | 17.11%    27.769 |                  |  no
+    18 |     17.8 | 14.75%    16.225 | 16.85%    26.953 |                  |  yes
+    19 |     17.5 | 14.46%    15.982 | 16.89%    27.213 |                  |  no
+    20 |     26.3 | 14.32%    15.790 | 16.99%    27.510 | 16.79%    30.949 |  no
+    21 |     16.2 | 14.15%    15.554 | 16.46%    26.738 |                  |  yes
+    22 |     17.3 | 14.00%    15.405 | 16.90%    27.094 |                  |  no
+    23 |     17.5 | 13.73%    15.148 | 16.75%    27.024 |                  |  no
+    24 |     16.3 | 13.54%    15.022 | 16.57%    26.844 |                  |  no
+    25 |     17.3 | 13.47%    14.856 | 16.33%    26.384 |                  |  yes
+    26 |     21.7 | 13.26%    14.680 | 16.19%    26.386 |                  |  no
+    27 |     19.9 | 13.14%    14.499 | 16.13%    26.322 |                  |  yes
+    28 |     20.2 | 13.06%    14.402 | 16.15%    26.301 |                  |  yes
+    29 |     19.2 | 12.84%    14.214 | 15.89%    25.985 |                  |  yes
+    30 |     31.0 | 12.71%    14.095 | 16.10%    26.319 | 15.93%    29.626 |  no
+    31 |     17.3 | 12.63%    13.963 | 15.92%    26.143 |                  |  no
+    32 |     17.1 | 12.62%    13.852 | 15.80%    25.937 |                  |  yes
+    33 |     18.3 | 12.41%    13.715 | 15.81%    25.862 |                  |  yes
+    34 |     26.7 | 12.38%    13.629 | 15.87%    26.041 |                  |  no
+    35 |     23.6 | 12.21%    13.526 | 15.93%    26.200 |                  |  no
+    36 |     20.4 | 12.04%    13.403 | 15.87%    26.199 |                  |  no
+    37 |     18.3 | 12.02%    13.286 | 15.70%    26.269 |                  |  no
+    38 |     18.5 | 11.91%    13.201 | 15.82%    26.174 |                  |  no
+    39 |     19.6 | 11.81%    13.126 | 15.68%    26.165 |                  |  no
+    40 |     26.7 | 11.63%    13.040 | 15.77%    26.115 | 15.60%    29.406 |  no
+    41 |     18.9 | 11.60%    12.952 | 15.73%    26.093 |                  |  no
+    42 |     16.4 | 11.66%    12.891 | 15.60%    25.985 |                  |  no
+    43 |     16.0 | 11.49%    12.782 | 15.53%    26.075 |                  |  no
+    44 |     16.8 | 11.41%    12.733 | 15.73%    26.127 |                  |  no
+    45 |     17.9 | 11.31%    12.640 | 15.51%    26.051 |                  |  no
+    46 |     16.3 | 11.33%    12.586 | 15.76%    26.294 |                  |  no
+    47 |     17.1 | 11.30%    12.537 | 15.46%    25.995 |                  |  no
+    48 |     16.0 | 11.14%    12.399 | 15.69%    26.511 |                  |  no
+    49 |     17.2 | 11.15%    12.382 | 15.71%    26.428 |                  |  no
+    50 |     26.7 | 11.15%    12.312 | 15.59%    26.097 | 15.41%    29.406 |  no
+    51 |     16.9 | 11.01%    12.246 | 15.51%    26.109 |                  |  no
+    52 |     17.4 | 10.95%    12.170 | 15.46%    26.068 |                  |  no
+    53 |     17.6 | 11.00%    12.124 | 15.79%    26.891 |                  |  no
+
+No new lowest error since 20 epochs. Training stopped.
+Lowest validation error: 25.861645
+
+Storing the trained network in 'savedNetwork.jsn'... done.
+Removing cache file(s) ...
+FAILED: boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:\Users\MOHAME~1\AppData\Local\Temp\e6ed-6521-9e3a-8477"
+Press any key to continue . . .
