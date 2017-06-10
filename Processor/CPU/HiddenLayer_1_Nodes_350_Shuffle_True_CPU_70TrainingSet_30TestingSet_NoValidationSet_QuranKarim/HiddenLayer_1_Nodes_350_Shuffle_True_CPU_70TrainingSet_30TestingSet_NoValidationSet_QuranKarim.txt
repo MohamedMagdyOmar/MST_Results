@@ -1,0 +1,102 @@
+Started in hybrid online/batch training mode.
+Sequences will be shuffled within and across mini-batches during training.
+The trained network will be written to 'savedNetwork.jsn'.
+WARNING: The output file 'savedNetwork.jsn' already exists. It will be overwritten!
+Test error will be calculated every 1 epochs.
+Training will be stopped after 100 epochs or if there is no new lowest validation error within 20 epochs.
+Autosave after EVERY EPOCH enabled.
+Autosave on BEST VALIDATION ERROR enabled.
+WARNING: CUDA option not set. Computations will be performed on the CPU!
+Uniform distribution with range [-0.1, 0.1]. Random seed: 1448333857
+
+Reading network from 'E:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\network.jsn'... done.
+
+Loading training set 'E:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\trainingNCFile_1.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\5d23-c4cb-3801-a83c
+... done.
+Loaded fraction:  100%
+Sequences:        3566
+Sequence lengths: 2..551
+Total timesteps:  231600
+
+Loading test set 'E:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\TestingNewNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\1827-b089-9919-d736
+... done.
+Loaded fraction:  100%
+Sequences:        2670
+Sequence lengths: 2..329
+Total timesteps:  99109
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 350, bias: 1.0, weights: 297850]
+(2) softmax [size: 422, bias: 1.0, weights: 148122]
+(3) multiclass_classification [size: 422]
+Total weights: 445972
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          1
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    710.5 | 30.53%    77.647 |                  | 20.60%    24.529 |
+     2 |    710.9 | 16.58%    33.584 |                  | 17.25%    19.874 |
+     3 |    711.0 | 13.46%    26.719 |                  | 14.96%    17.333 |
+     4 |    711.1 | 11.36%    22.539 |                  | 14.03%    16.169 |
+     5 |    711.2 |  9.88%    19.610 |                  | 13.44%    15.459 |
+     6 |    712.0 |  8.63%    17.141 |                  | 12.68%    14.887 |
+     7 |    712.0 |  7.64%    15.246 |                  | 12.37%    14.932 |
+     8 |    711.2 |  6.82%    13.567 |                  | 12.20%    14.630 |
+     9 |    711.4 |  6.01%    12.069 |                  | 11.90%    14.342 |
+    10 |    711.1 |  5.35%    10.837 |                  | 11.58%    14.345 |
+    11 |    712.3 |  4.77%     9.692 |                  | 11.65%    14.415 |
+    12 |    711.6 |  4.23%     8.665 |                  | 11.80%    14.708 |
+    13 |    711.4 |  3.82%     7.873 |                  | 11.54%    14.918 |
+    14 |    711.5 |  3.38%     7.064 |                  | 11.47%    14.673 |
+    15 |    712.0 |  2.96%     6.272 |                  | 11.49%    15.294 |
+    16 |    715.2 |  2.62%     5.677 |                  | 11.44%    15.249 |
+    17 |    712.1 |  2.28%     5.076 |                  | 11.48%    15.471 |
+    18 |    711.9 |  1.99%     4.539 |                  | 11.38%    15.675 |
+    19 |    711.6 |  1.74%     4.050 |                  | 11.32%    15.857 |
+    20 |    712.1 |  1.52%     3.629 |                  | 11.34%    15.971 |
+    21 |    713.6 |  1.26%     3.220 |                  | 11.23%    16.225 |
+    22 |    711.8 |  1.12%     2.929 |                  | 11.23%    16.389 |
+    23 |    712.2 |  0.82%     2.414 |                  | 11.20%    16.606 |
+    24 |    712.5 |  0.69%     2.103 |                  | 10.95%    16.847 |
+    25 |    712.4 |  0.52%     1.791 |                  | 10.90%    16.983 |
+    26 |    712.9 |  0.37%     1.474 |                  | 11.04%    17.344 |
+    27 |    712.0 |  0.29%     1.290 |                  | 11.03%    17.525 |
+    28 |    735.4 |  0.17%     1.010 |                  | 10.94%    17.703 |
+    29 |    751.5 |  0.07%     0.727 |                  | 10.81%    17.896 |
+    30 |    753.3 |  0.02%     0.475 |                  | 10.69%    18.120 |
+    31 |    754.8 |  0.00%     0.313 |                  | 10.74%    18.479 |
+    32 |    754.8 |  0.00%     0.229 |                  | 10.71%    18.752 |
+    33 |    754.5 |  0.00%     0.185 |                  | 10.77%    19.064 |
+    34 |    754.8 |  0.00%     0.164 |                  | 10.82%    19.282 |
+    35 |    754.5 |  0.00%     0.145 |                  | 10.80%    19.483 |
+    36 |    756.9 |  0.00%     0.130 |                  | 10.84%    19.676 |
+    37 |    755.1 |  0.00%     0.119 |                  | 10.88%    19.843 |
+    38 |    754.7 |  0.00%     0.110 |                  | 10.89%    19.972 |
+    39 |    754.1 |  0.00%     0.103 |                  | 10.90%    20.129 |
+    40 |    756.6 |  0.00%     0.096 |                  | 10.94%    20.254 |
+    41 |    754.9 |  0.00%     0.091 |                  | 10.96%    20.370 |
+    42 |    754.7 |  0.00%     0.086 |                  | 10.94%    20.467 |
+    43 |    754.8 |  0.00%     0.082 |                  | 10.97%    20.566 |
+    44 |    755.5 |  0.00%     0.078 |                  | 10.99%    20.669 |
+    45 |    756.7 |  0.00%     0.074 |                  | 11.00%    20.775 |
+    46 |    756.3 |  0.00%     0.071 |                  | 11.01%    20.865 |
+    47 |    756.6 |  0.00%     0.068 |                  | 11.02%    20.940 |
+    48 |    753.7 |  0.00%     0.066 |                  | 11.02%    21.026 |
+    49 |    730.1 |  0.00%     0.064 |                  | 11.02%    21.097 |
+    50 |    730.2 |  0.00%     0.063 |                  | 11.03%    21.169 |
+    51 |    714.7 |  0.00%     0.060 |                  | 11.06%    21.231 |
