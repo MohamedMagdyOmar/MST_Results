@@ -1,0 +1,69 @@
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 350, bias: 1.0, weights: 297850]
+(2) softmax [size: 349, bias: 1.0, weights: 122499]
+(3) multiclass_classification [size: 349]
+Total weights: 420349
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 20
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    563.6 | 27.34%    55.019 | 19.06%    31.375 |                  |  yes
+     2 |    526.5 | 15.65%    25.647 | 15.38%    24.764 |                  |  yes
+     3 |    521.1 | 12.63%    20.451 | 13.79%    22.137 |                  |  yes
+     4 |    523.3 | 10.69%    17.364 | 12.70%    20.598 |                  |  yes
+     5 |    518.8 |  9.29%    15.143 | 11.99%    19.558 |                  |  yes
+     6 |    521.8 |  8.29%    13.486 | 11.64%    18.920 |                  |  yes
+     7 |    518.0 |  7.41%    12.052 | 11.04%    18.256 |                  |  yes
+     8 |    518.3 |  6.73%    10.927 | 10.78%    18.178 |                  |  yes
+     9 |    519.6 |  6.15%     9.967 | 10.75%    18.046 |                  |  yes
+    10 |    551.0 |  5.65%     9.157 | 10.39%    17.705 | 10.39%    17.705 |  yes
+    11 |    526.0 |  5.18%     8.407 | 10.13%    17.636 |                  |  yes
+    12 |    526.7 |  4.71%     7.685 | 10.06%    17.619 |                  |  yes
+    13 |    527.8 |  4.47%     7.182 |  9.94%    17.218 |                  |  yes
+    14 |    528.6 |  4.05%     6.566 |  9.85%    17.400 |                  |  no
+    15 |    555.9 |  3.73%     6.084 |  9.77%    17.437 |                  |  no
+    16 |    558.3 |  3.47%     5.658 |  9.60%    17.438 |                  |  no
+    17 |    550.5 |  3.19%     5.263 |  9.29%    17.166 |                  |  yes
+    18 |    536.4 |  2.90%     4.816 |  9.21%    16.971 |                  |  yes
+    19 |    564.1 |  2.65%     4.410 |  9.31%    17.554 |                  |  no
+    20 |    571.2 |  2.42%     4.112 |  9.48%    17.591 |  9.48%    17.591 |  no
+    21 |    612.3 |  2.20%     3.793 |  9.27%    17.507 |                  |  no
+    22 |    590.5 |  2.07%     3.559 |  9.31%    17.829 |                  |  no
+    23 |    579.0 |  1.93%     3.354 |  8.94%    17.555 |                  |  no
+    24 |    601.6 |  1.77%     3.110 |  8.90%    17.446 |                  |  no
+    25 |    572.8 |  1.56%     2.822 |  8.84%    17.630 |                  |  no
+    26 |    606.7 |  1.34%     2.526 |  8.86%    17.720 |                  |  no
+    27 |    568.7 |  1.23%     2.347 |  8.74%    17.864 |                  |  no
+    28 |    547.6 |  1.12%     2.173 |  8.63%    17.506 |                  |  no
+    29 |    560.0 |  0.95%     1.958 |  8.57%    17.899 |                  |  no
+    30 |    546.5 |  0.89%     1.805 |  8.53%    17.939 |  8.53%    17.939 |  no
+    31 |    521.8 |  0.83%     1.720 |  8.60%    18.171 |                  |  no
+    32 |    555.7 |  0.77%     1.583 |  8.34%    18.063 |                  |  no
+    33 |    563.9 |  0.64%     1.428 |  8.35%    17.937 |                  |  no
+    34 |    579.4 |  0.58%     1.293 |  8.38%    18.221 |                  |  no
+    35 |    532.8 |  0.48%     1.145 |  8.44%    18.500 |                  |  no
+    36 |    527.9 |  0.41%     0.998 |  8.27%    18.267 |                  |  no
+    37 |    547.8 |  0.34%     0.883 |  8.22%    18.461 |                  |  no
+    38 |    532.2 |  0.33%     0.835 |  8.25%    18.385 |                  |  no
+
+No new lowest error since 20 epochs. Training stopped.
+Lowest validation error: 16.970839
+
+Storing the trained network in 'savedNetwork.jsn'... done.
+Removing cache file(s) ...
+FAILED: boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:\Users\MOHAME~1\AppData\Local\Temp\c031-e13a-d475-1021"
+Press any key to continue . . .

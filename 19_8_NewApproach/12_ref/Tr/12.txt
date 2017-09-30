@@ -1,0 +1,51 @@
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 450, bias: 1.0, weights: 472950]
+(2) softmax [size: 349, bias: 1.0, weights: 157399]
+(3) multiclass_classification [size: 349]
+Total weights: 630349
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 10
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |    843.6 | 27.78%    56.019 | 16.78%    27.928 |                  |  yes
+     2 |    829.5 | 15.43%    25.192 | 13.77%    22.333 |                  |  yes
+     3 |    823.9 | 12.34%    19.882 | 12.36%    19.530 |                  |  yes
+     4 |    821.5 | 10.38%    16.633 | 11.11%    17.918 |                  |  yes
+     5 |    866.5 |  8.90%    14.256 | 10.17%    16.643 |                  |  yes
+     6 |    835.5 |  7.71%    12.403 |  9.86%    16.080 |                  |  yes
+     7 |    862.9 |  6.73%    10.825 |  9.16%    15.465 |                  |  yes
+     8 |    983.8 |  5.83%     9.418 |  9.26%    15.328 |                  |  yes
+     9 |    837.0 |  5.17%     8.336 |  9.19%    15.223 |                  |  yes
+    10 |    831.3 |  4.44%     7.250 |  8.75%    15.062 |  8.75%    15.062 |  yes
+    11 |    781.9 |  3.92%     6.405 |  8.68%    15.103 |                  |  no
+    12 |    778.4 |  3.40%     5.633 |  8.73%    15.315 |                  |  no
+    13 |    775.7 |  2.92%     4.923 |  8.53%    15.291 |                  |  no
+    14 |    776.0 |  2.50%     4.314 |  8.41%    15.275 |                  |  no
+    15 |    776.8 |  2.19%     3.811 |  8.56%    15.925 |                  |  no
+    16 |    779.9 |  1.86%     3.320 |  8.55%    16.027 |                  |  no
+    17 |    774.4 |  1.55%     2.861 |  8.32%    15.950 |                  |  no
+    18 |    818.6 |  1.32%     2.532 |  8.18%    16.081 |                  |  no
+    19 |    782.9 |  1.13%     2.232 |  8.07%    16.318 |                  |  no
+    20 |    815.2 |  0.88%     1.861 |  8.14%    16.512 |  8.14%    16.512 |  no
+
+No new lowest error since 10 epochs. Training stopped.
+Lowest validation error: 15.061595
+
+Storing the trained network in 'savedNetwork.jsn'... done.
+Removing cache file(s) ...
+FAILED: boost::filesystem::remove: The process cannot access the file because it is being used by another process: "C:\Users\MOHAME~1\AppData\Local\Temp\e97a-f1d8-ad66-c590"
+Press any key to continue . . .
