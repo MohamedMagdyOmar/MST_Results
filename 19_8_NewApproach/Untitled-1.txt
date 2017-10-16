@@ -1,0 +1,52 @@
+Sequence lengths: 3..350
+Total timesteps:  39514
+
+Loading test set 'D:\CurrenntRepo\CurrenntVS\CURRENNT\ArabicDiacritizationExample\testingNCFile.nc' ...
+using cache file: C:\Users\MOHAME~1\AppData\Local\Temp\6f5d-2c10-3d00-34d8
+... done.
+Loaded fraction:  100%
+Sequences:        747
+Sequence lengths: 3..350
+Total timesteps:  39514
+
+Creating the neural network... done.
+Layers:
+(0) input [size: 36]
+(1) blstm [size: 350, bias: 1.0, weights: 297850]
+(2) softmax [size: 479, bias: 1.0, weights: 168129]
+(3) multiclass_classification [size: 479]
+Total weights: 465979
+
+
+Creating the optimizer... done.
+Optimizer type: Steepest descent with momentum
+Max training epochs:       100
+Max epochs until new best: 10
+Validation error every:    1
+Test error every:          10
+Learning rate:             0.001
+Momentum:                  0.9
+
+Starting training...
+
+ Epoch | Duration |  Training error  | Validation error |    Test error    | New best
+-------+----------+------------------+------------------+------------------+----------
+     1 |   2695.1 |  4.81%     7.628 |  8.02%    13.824 |                  |  yes
+     2 |   3329.7 |  4.49%     7.119 |  7.91%    14.001 |                  |  no
+     3 |   2982.3 |  4.17%     6.721 |  8.04%    14.125 |                  |  no
+     4 |   3233.7 |  3.99%     6.369 |  7.83%    13.905 |                  |  no
+     5 |   4205.6 |  3.76%     5.983 |  7.69%    13.996 |                  |  no
+     6 |   3636.7 |  3.53%     5.693 |  7.75%    13.816 |                  |  yes
+     7 |   3935.7 |  3.32%     5.345 |  7.67%    14.124 |                  |  no
+     8 |   3921.8 |  3.19%     5.119 |  7.55%    14.181 |                  |  no
+     9 |   3350.5 |  2.97%     4.825 |  7.57%    14.311 |                  |  no
+    10 |   4298.4 |  2.82%     4.590 |  7.74%    14.464 |  7.74%    14.464 |  no
+    11 |   2742.3 |  2.66%     4.342 |  7.70%    14.531 |                  |  no
+    12 |   2852.9 |  2.55%     4.139 |  7.69%    14.775 |                  |  no
+    13 |   3021.1 |  2.36%     3.895 |  7.57%    14.855 |                  |  no
+    14 |   2813.7 |  2.26%     3.737 |  7.47%    14.528 |                  |  no
+    15 |   2887.4 |  2.14%     3.568 |  7.56%    14.878 |                  |  no
+    16 |   4098.2 |  2.00%     3.366 |  7.47%    14.788 |                  |  no
+
+No new lowest error since 10 epochs. Training stopped.
+Lowest validation error: 13.816324
